@@ -13,7 +13,8 @@
 
 body{
   background:var(--bg);
-  color:white;line-height:1.6;
+  color:white;
+  line-height:1.6;
 }
 
 header{
@@ -72,13 +73,19 @@ h2{
 }
 .card:hover{
   border-color:var(--gold);
-  transform:translateY(-3px);
+  transform:translateY(-4px);
 }
 
 .card a{
   color:var(--gold);
   text-decoration:none;
   font-size:14px;
+}
+.card ol li{
+  list-style: none;
+}
+.card li{
+  color: #aaa;
 }
 
 form{
@@ -101,4 +108,25 @@ footer{
   color:#666;
   border-top:1px solid #222;
   margin-top:40px;
+}
+
+@media(max-width: 768px){
+  .grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+.card h3{
+  font-size: 16px;
+}
+.card ol li{
+  font-size: 12px;
+  list-style: none;
+}
+.card li{
+  color: #aaa;
+}
+.nowrap{
+  white-space: nowrap;
+}
 }
